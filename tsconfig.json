@@ -16,14 +16,6 @@
     "lib": [
       "es2018",
       "dom"
-    ],
-    "paths": {
-      "ngx-anx-forms": [
-        "dist/ngx-anx-forms"
-      ],
-      "ngx-anx-forms/*": [
-        "dist/ngx-anx-forms/*"
-      ]
-    }
+    ]
   }
 }
