@@ -26,9 +26,6 @@ function mapFormArrayErrors(formArray: FormArray, apiErrors: {}[]) {
 
 /**
  * Set errors received from a REST API call to a Form
- *
- * @param {FormGroup} abstractControl
- * @param {any} apiErrors
  */
 export function mapFormErrors(abstractControl: AbstractControl, apiErrors: any) {
     if (abstractControl instanceof FormGroup) {

@@ -13,3 +13,4 @@ export * from './lib/components/input-textarea/input-textarea.component';
 export * from './lib/components/input-radio/input-radio.component';
 export * from './lib/components/input-distributed-multiple-choice/input-distributed-multiple-choice.component';
 export * from './lib/services/error-message.service';
+export * from './lib/utils/form-error-mapper';
