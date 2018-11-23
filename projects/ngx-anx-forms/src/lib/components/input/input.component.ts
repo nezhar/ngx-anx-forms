@@ -35,7 +35,7 @@ export class InputComponent extends NgModelValueAccessor implements OnInit, OnDe
 
     @ViewChild('inputField') inputField: NgModel;
 
-    observer: MutationObserver;
+    private mutationObserver: MutationObserver;
     differ: any;
 
     constructor(protected elRef: ElementRef) {
@@ -55,7 +55,7 @@ export class InputComponent extends NgModelValueAccessor implements OnInit, OnDe
     }
 
     subscribeOnTouchPorpagation() {
-        const observer = new MutationObserver(() => {
+        this.mutationObserver = new MutationObserver(() => {
             if (this.elRef.nativeElement.classList.contains('ng-touched')) {
                 this.inputField.control.markAsTouched();
             }
@@ -70,13 +70,13 @@ export class InputComponent extends NgModelValueAccessor implements OnInit, OnDe
             }
         });
 
-        observer.observe(this.elRef.nativeElement, {
+        this.mutationObserver.observe(this.elRef.nativeElement, {
             attributes: true,
             attributeFilter: ['class'] 
         });
     }
 
     unsubscribeOnTouchPorpagation() {
-        this.observer.disconnect();
+        this.mutationObserver.disconnect();
     }
 }
