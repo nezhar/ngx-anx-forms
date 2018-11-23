@@ -1,5 +1,16 @@
-<h2>Simple Input</h2>
-<anx-forms-input></anx-forms-input>
+<div [formGroup]="form">
+    <h2>Simple Input</h2>
+    <anx-forms-input formControlName="test_text" [errors]="form.get('test_text').errors"></anx-forms-input>
 
-<h2>Textarea</h2>
-<anx-forms-input-textarea></anx-forms-input-textarea>
+    <h2>Textarea</h2>
+    <anx-forms-input-textarea formControlName="test_textarea" [errors]="form.get('test_textarea').errors"></anx-forms-input-textarea>
+</div>
+
+<hr>
+{{ this.form.value | json }}
+<hr>
+
+<button (click)="markAsTouched()">Mark as Touched</button>
+<button (click)="markAsDirty()">Mark as Dirty</button>
+<button (click)="markAsUntouched()">Mark as Untouched</button>
+<button (click)="markAsPrestine()">Mark as Prestine</button>

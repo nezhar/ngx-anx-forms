@@ -1,4 +1,4 @@
-import { Component, forwardRef, Input, ViewChild } from '@angular/core';
+import { Component, forwardRef, Input, ViewChild, ElementRef } from '@angular/core';
 import { NG_VALUE_ACCESSOR, NgModel } from '@angular/forms';
 import { NgSelectConfig } from '@ng-select/ng-select';
 
@@ -31,9 +31,9 @@ export class InputSelectComponent extends InputComponent {
 
     @ViewChild('inputField') inputField: NgModel;
 
-    constructor(private config: NgSelectConfig) {
-        super();
+     constructor(protected elRef: ElementRef,
+                 private config: NgSelectConfig) {
+        super(elRef);
         this.config.notFoundText = '-';
     }
-
 }

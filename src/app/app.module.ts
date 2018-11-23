@@ -12,7 +12,8 @@ import { AppComponent } from './app.component';
   imports: [
     BrowserModule,
     FormsModule,
-    NgxAnxFormsModule
+    ReactiveFormsModule,
+    NgxAnxFormsModule.forRoot(),
   ],
   providers: [],
   bootstrap: [AppComponent]
