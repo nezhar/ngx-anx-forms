@@ -14,6 +14,8 @@ export class AppComponent implements OnInit {
     this.form = new FormGroup({
       'test_text': new FormControl('', Validators.required),
       'test_textarea': new FormControl('', Validators.required),
+      'test_checkbox': new FormControl(false, Validators.requiredTrue),
+      'test_radio': new FormControl(false),
     });
   }
 

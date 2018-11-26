@@ -43,18 +43,18 @@ export class InputComponent extends NgModelValueAccessor implements OnInit, OnDe
     }
 
     ngOnInit() {
-        this.subscribeOnTouchPorpagation();
+        this.subscribeOnTouchPropagation();
     }
 
     ngOnDestroy() {
-        this.unsubscribeOnTouchPorpagation()
+        this.unsubscribeOnTouchPropagation()
     }
 
     displayErrors(): boolean {
         return !!this.errors && (this.inputField.touched || this.errors[SERVER_ERROR_KEY]);
     }
 
-    subscribeOnTouchPorpagation() {
+    subscribeOnTouchPropagation() {
         this.mutationObserver = new MutationObserver(() => {
             if (this.elRef.nativeElement.classList.contains('ng-touched')) {
                 this.inputField.control.markAsTouched();
@@ -76,7 +76,7 @@ export class InputComponent extends NgModelValueAccessor implements OnInit, OnDe
         });
     }
 
-    unsubscribeOnTouchPorpagation() {
+    unsubscribeOnTouchPropagation() {
         this.mutationObserver.disconnect();
     }
 }

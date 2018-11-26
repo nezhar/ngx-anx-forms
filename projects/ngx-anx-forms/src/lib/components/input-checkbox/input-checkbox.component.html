@@ -12,7 +12,7 @@
             [name]="name"
             [disabled]="readonly"
             [placeholder]="placeholder"/>
-        <span>{{ label }}</span>
+        <ng-content></ng-content>
     </label>
     <anx-forms-input-error
         *ngIf="displayErrors()"

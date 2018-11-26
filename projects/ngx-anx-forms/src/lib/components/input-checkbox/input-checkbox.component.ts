@@ -1,4 +1,4 @@
-import { Component, forwardRef, Input } from '@angular/core';
+import { Component, forwardRef } from '@angular/core';
 import { NG_VALUE_ACCESSOR } from '@angular/forms';
 
 import { InputComponent } from '../input/input.component';
@@ -19,5 +19,4 @@ import { InputComponent } from '../input/input.component';
     ],
 })
 export class InputCheckboxComponent extends InputComponent {
-    @Input() public label: string = '';
 }
