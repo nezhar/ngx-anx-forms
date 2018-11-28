@@ -36,6 +36,14 @@
                 Custom <b>Label 2</b>
             </span>
         </anx-forms-input-radio>
+
+        <h3>Select</h3>
+        <anx-forms-input-select
+            [options]="selectOptions"
+            bindLabel='label'
+            bindValue='pk'
+            formControlName="test_select"
+        ></anx-forms-input-select>
     </div>
 
     <hr>
