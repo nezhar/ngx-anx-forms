@@ -3,6 +3,7 @@
         <ng-content></ng-content>
     </div>
     <anx-forms-input
+            #inputField="ngModel"
             [ngModel]="value"
             (ngModelChange)="triggerOnChange($event)"
             (blur)="triggerOnTouched()"

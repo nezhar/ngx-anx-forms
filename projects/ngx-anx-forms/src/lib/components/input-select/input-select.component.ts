@@ -31,7 +31,7 @@ export class InputSelectComponent extends InputComponent {
 
     @ViewChild('inputField') inputField: NgModel;
 
-     constructor(protected elRef: ElementRef,
+    constructor(protected elRef: ElementRef,
                  private config: NgSelectConfig) {
         super(elRef);
         this.config.notFoundText = '-';

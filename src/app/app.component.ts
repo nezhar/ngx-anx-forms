@@ -16,7 +16,7 @@ export class AppComponent implements OnInit {
       'test_textarea': new FormControl('', Validators.required),
       'test_checkbox': new FormControl(false, Validators.requiredTrue),
       'test_radio': new FormControl(false),
-      'test_select': new FormControl(null, Validators.requiredTrue),
+      'test_select': new FormControl(null, Validators.required),
     });
   }
 
