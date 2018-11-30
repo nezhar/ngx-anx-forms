@@ -1,15 +1,14 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+
+import { InputLikertScaleComponent } from './input-likert-scale.component';
 import { FormsModule } from '@angular/forms';
+import { InputRadioComponent } from '../../simple/input-radio/input-radio.component';
+import { InputErrorComponent } from '../../simple/input-error/input-error.component';
+import { DefaultErrorMessageService, ErrorMessageService } from '../../../services/error-message.service';
 
-import { IconInputComponent } from './icon-input.component';
-import { InputComponent } from '../input/input.component';
-import { InputErrorComponent } from '../input-error/input-error.component';
-import { DefaultErrorMessageService, ErrorMessageService } from 'ngx-anx-forms/services/error-message.service';
-
-
-describe('IconInputComponent', () => {
-    let component: IconInputComponent;
-    let fixture: ComponentFixture<IconInputComponent>;
+describe('InputLikertScaleComponent', () => {
+    let component: InputLikertScaleComponent;
+    let fixture: ComponentFixture<InputLikertScaleComponent>;
 
     beforeEach(async(() => {
         TestBed.configureTestingModule({
@@ -17,8 +16,8 @@ describe('IconInputComponent', () => {
                 FormsModule,
             ],
             declarations: [
-                IconInputComponent,
-                InputComponent,
+                InputLikertScaleComponent,
+                InputRadioComponent,
                 InputErrorComponent,
             ],
             providers: [
@@ -32,7 +31,7 @@ describe('IconInputComponent', () => {
     }));
 
     beforeEach(() => {
-        fixture = TestBed.createComponent(IconInputComponent);
+        fixture = TestBed.createComponent(InputLikertScaleComponent);
         component = fixture.componentInstance;
         fixture.detectChanges();
     });

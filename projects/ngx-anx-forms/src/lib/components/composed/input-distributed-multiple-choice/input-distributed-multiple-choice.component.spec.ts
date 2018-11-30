@@ -6,8 +6,8 @@ import { NgSelectModule } from '@ng-select/ng-select';
 
 import { InputDistributedMultipleChoiceComponent } from './input-distributed-multiple-choice.component';
 import { InputSelectComponent } from '../input-select/input-select.component';
-import { InputErrorComponent } from '../input-error/input-error.component';
-import { DefaultErrorMessageService, ErrorMessageService } from 'ngx-anx-forms/services/error-message.service';
+import { InputErrorComponent } from '../../simple/input-error/input-error.component';
+import { DefaultErrorMessageService, ErrorMessageService } from '../../../services/error-message.service';
 
 describe('InputDistributedMultipleChoiceComponent', () => {
     let component: InputDistributedMultipleChoiceComponent;

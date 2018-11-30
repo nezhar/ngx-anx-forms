@@ -3,7 +3,7 @@ import { FormsModule } from '@angular/forms';
 
 import { InputComponent } from './input.component';
 import { InputErrorComponent } from '../input-error/input-error.component';
-import { DefaultErrorMessageService, ErrorMessageService } from 'ngx-anx-forms/services/error-message.service';
+import { DefaultErrorMessageService, ErrorMessageService } from '../../../services/error-message.service';
 
 
 describe('InputComponent', () => {

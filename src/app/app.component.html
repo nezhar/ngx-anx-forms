@@ -37,7 +37,7 @@
             </span>
         </anx-forms-input-radio>
 
-        <h3>Select</h3>
+        <h3>Select dropdown</h3>
         <anx-forms-input-select
             [options]="selectOptions"
             bindLabel='label'
@@ -45,6 +45,25 @@
             formControlName="test_select"
             [errors]="form.get('test_select').errors"
         ></anx-forms-input-select>
+
+        <h3>Select checkbox</h3>
+        <anx-forms-input-select-checkbox
+                [options]="selectOptions"
+                [bindValue]="'pk'"
+                [bindLabel]="'label'"
+                [errors]="form.get('test_select_checkbox').errors"
+                formControlName="test_select_checkbox"
+        ></anx-forms-input-select-checkbox>
+        
+        <h3>Select radio</h3>
+        <anx-forms-input-select-radio
+            [options]="selectOptions"
+            [bindValue]="'pk'"
+            [bindLabel]="'label'"
+            [errors]="form.get('test_select_radio').errors"
+            formControlName="test_select_radio"
+        ></anx-forms-input-select-radio>
+
     </div>
 
     <hr>

@@ -4,16 +4,21 @@ import { CommonModule } from '@angular/common';
 
 import { NgSelectModule } from '@ng-select/ng-select';
 
-import { InputComponent } from './components/input/input.component';
-import { IconInputComponent } from './components/icon-input/icon-input.component';
-import { InputCheckboxComponent } from './components/input-checkbox/input-checkbox.component';
-import { InputSelectComponent } from './components/input-select/input-select.component';
-import { InputErrorComponent } from './components/input-error/input-error.component';
-import { InputLikertScaleComponent } from './components/input-likert-scale/input-likert-scale.component';
-import { InputTextareaComponent } from './components/input-textarea/input-textarea.component';
-import { InputRadioComponent } from './components/input-radio/input-radio.component';
-import { InputDistributedMultipleChoiceComponent } from './components/input-distributed-multiple-choice/input-distributed-multiple-choice.component';
+import { InputComponent } from './components/simple/input/input.component';
+import { InputCheckboxComponent } from './components/simple/input-checkbox/input-checkbox.component';
+import { InputErrorComponent } from './components/simple/input-error/input-error.component';
+import { InputTextareaComponent } from './components/simple/input-textarea/input-textarea.component';
+import { InputRadioComponent } from './components/simple/input-radio/input-radio.component';
 import { DefaultErrorMessageService, ErrorMessageService } from './services/error-message.service';
+
+import {
+    InputDistributedMultipleChoiceComponent
+} from './components/composed/input-distributed-multiple-choice/input-distributed-multiple-choice.component';
+import { InputSelectComponent } from './components/composed/input-select/input-select.component';
+import { IconInputComponent } from './components/composed/icon-input/icon-input.component';
+import { InputLikertScaleComponent } from './components/composed/input-likert-scale/input-likert-scale.component';
+import { InputSelectCheckboxComponent } from './components/composed/input-select-checkbox/input-select-checkbox.component';
+import { InputSelectRadioComponent } from './components/composed/input-select-radio/input-select-radio.component';
 
 
 export interface NgxAnxFormsConfig {
@@ -38,6 +43,8 @@ export interface NgxAnxFormsConfig {
         InputTextareaComponent,
         InputRadioComponent,
         InputDistributedMultipleChoiceComponent,
+        InputSelectCheckboxComponent,
+        InputSelectRadioComponent,
     ],
     declarations: [
         InputErrorComponent,
@@ -49,6 +56,8 @@ export interface NgxAnxFormsConfig {
         InputTextareaComponent,
         InputRadioComponent,
         InputDistributedMultipleChoiceComponent,
+        InputSelectCheckboxComponent,
+        InputSelectRadioComponent,
     ],
     schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
 })

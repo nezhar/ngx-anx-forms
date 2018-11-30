@@ -1,7 +1,7 @@
 import { Component, Input, OnChanges, SimpleChanges } from '@angular/core';
 import { ValidationErrors } from '@angular/forms';
 
-import { ErrorMessageService } from '../../services/error-message.service';
+import { ErrorMessageService } from '../../../services/error-message.service';
 
 
 export const SERVER_ERROR_KEY = 'serverErrors';

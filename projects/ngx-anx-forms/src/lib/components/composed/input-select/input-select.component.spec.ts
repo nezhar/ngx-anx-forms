@@ -1,23 +1,24 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
-import { InputCheckboxComponent } from './input-checkbox.component';
-import { InputErrorComponent } from '../input-error/input-error.component';
 import { FormsModule } from '@angular/forms';
-import { DefaultErrorMessageService, ErrorMessageService } from 'ngx-anx-forms/services/error-message.service';
+import { NgSelectModule } from '@ng-select/ng-select';
 
+import { InputSelectComponent } from './input-select.component';
+import { InputErrorComponent } from '../../simple/input-error/input-error.component';
+import { DefaultErrorMessageService, ErrorMessageService } from '../../../services/error-message.service';
 
-describe('InputCheckboxComponent', () => {
-    let component: InputCheckboxComponent;
-    let fixture: ComponentFixture<InputCheckboxComponent>;
+describe('InputSelectComponent', () => {
+    let component: InputSelectComponent;
+    let fixture: ComponentFixture<InputSelectComponent>;
 
     beforeEach(async(() => {
         TestBed.configureTestingModule({
             imports: [
                 FormsModule,
+                NgSelectModule
             ],
             declarations: [
-                InputCheckboxComponent,
-                InputErrorComponent,
+                InputSelectComponent,
+                InputErrorComponent
             ],
             providers: [
                 {
@@ -30,7 +31,7 @@ describe('InputCheckboxComponent', () => {
     }));
 
     beforeEach(() => {
-        fixture = TestBed.createComponent(InputCheckboxComponent);
+        fixture = TestBed.createComponent(InputSelectComponent);
         component = fixture.componentInstance;
         fixture.detectChanges();
     });

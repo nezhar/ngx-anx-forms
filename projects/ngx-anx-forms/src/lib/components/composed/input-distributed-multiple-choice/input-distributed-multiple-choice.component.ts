@@ -9,7 +9,7 @@ import {
 import { Subscription } from 'rxjs';
 
 import { FormControl, FormGroup, NG_VALUE_ACCESSOR } from '@angular/forms';
-import { InputComponent } from '../input/input.component';
+import { InputComponent } from '../../simple/input/input.component';
 
 
 @Component({
@@ -38,7 +38,7 @@ export class InputDistributedMultipleChoiceComponent extends InputComponent impl
     @Input() bindLabel: string;
     @Input() bindValue: string;
     @Input() weightingTypes: {key: string, label: string}[] = [];
-    @Input() initialValue: {}[] = [];
+    @Input() initialValue: {}[] = []; // ToDo: Refactor this to use writeValue for inital value
 
     ngOnInit() {
         for (const weightingType of this.weightingTypes) {

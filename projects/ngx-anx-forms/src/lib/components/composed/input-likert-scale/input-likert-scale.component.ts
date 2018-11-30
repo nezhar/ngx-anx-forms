@@ -1,7 +1,7 @@
 import { Component, forwardRef, Input } from '@angular/core';
 import { NG_VALUE_ACCESSOR } from '@angular/forms';
 
-import { InputComponent } from '../input/input.component';
+import { InputComponent } from '../../simple/input/input.component';
 
 @Component({
     selector: 'anx-forms-input-likert-scale',

@@ -2,7 +2,7 @@ import { Component, Input, forwardRef, ViewChild, ElementRef, OnInit, OnDestroy 
 import { NG_VALUE_ACCESSOR, NgModel, ValidationErrors, AbstractControl } from '@angular/forms';
 
 import { SERVER_ERROR_KEY } from '../input-error/input-error.component';
-import { NgModelValueAccessor } from '../../utils/ng-model-value-accessor';
+import { NgModelValueAccessor } from '../../../utils/ng-model-value-accessor';
 
 
 @Component({

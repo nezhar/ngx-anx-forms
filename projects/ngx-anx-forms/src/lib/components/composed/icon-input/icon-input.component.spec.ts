@@ -1,23 +1,25 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { FormsModule } from '@angular/forms';
 
-import { InputTextareaComponent } from './input-textarea.component';
-import { InputErrorComponent } from '../input-error/input-error.component';
-import { DefaultErrorMessageService, ErrorMessageService } from 'ngx-anx-forms/services/error-message.service';
+import { IconInputComponent } from './icon-input.component';
+import { InputComponent } from '../../simple/input/input.component';
+import { InputErrorComponent } from '../../simple/input-error/input-error.component';
+import { DefaultErrorMessageService, ErrorMessageService } from '../../../services/error-message.service';
 
 
-describe('InputTextareaComponent', () => {
-    let component: InputTextareaComponent;
-    let fixture: ComponentFixture<InputTextareaComponent>;
+describe('IconInputComponent', () => {
+    let component: IconInputComponent;
+    let fixture: ComponentFixture<IconInputComponent>;
 
     beforeEach(async(() => {
         TestBed.configureTestingModule({
             imports: [
-                FormsModule
+                FormsModule,
             ],
             declarations: [
-                InputTextareaComponent,
-                InputErrorComponent
+                IconInputComponent,
+                InputComponent,
+                InputErrorComponent,
             ],
             providers: [
                 {
@@ -30,7 +32,7 @@ describe('InputTextareaComponent', () => {
     }));
 
     beforeEach(() => {
-        fixture = TestBed.createComponent(InputTextareaComponent);
+        fixture = TestBed.createComponent(IconInputComponent);
         component = fixture.componentInstance;
         fixture.detectChanges();
     });

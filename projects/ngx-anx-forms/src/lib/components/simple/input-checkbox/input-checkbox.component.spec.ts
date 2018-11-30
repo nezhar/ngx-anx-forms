@@ -1,14 +1,14 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { InputLikertScaleComponent } from './input-likert-scale.component';
-import { FormsModule } from '@angular/forms';
-import { InputRadioComponent } from '../input-radio/input-radio.component';
+import { InputCheckboxComponent } from './input-checkbox.component';
 import { InputErrorComponent } from '../input-error/input-error.component';
-import { DefaultErrorMessageService, ErrorMessageService } from 'ngx-anx-forms/services/error-message.service';
+import { FormsModule } from '@angular/forms';
+import { DefaultErrorMessageService, ErrorMessageService } from '../../../services/error-message.service';
 
-describe('InputLikertScaleComponent', () => {
-    let component: InputLikertScaleComponent;
-    let fixture: ComponentFixture<InputLikertScaleComponent>;
+
+describe('InputCheckboxComponent', () => {
+    let component: InputCheckboxComponent;
+    let fixture: ComponentFixture<InputCheckboxComponent>;
 
     beforeEach(async(() => {
         TestBed.configureTestingModule({
@@ -16,8 +16,7 @@ describe('InputLikertScaleComponent', () => {
                 FormsModule,
             ],
             declarations: [
-                InputLikertScaleComponent,
-                InputRadioComponent,
+                InputCheckboxComponent,
                 InputErrorComponent,
             ],
             providers: [
@@ -31,7 +30,7 @@ describe('InputLikertScaleComponent', () => {
     }));
 
     beforeEach(() => {
-        fixture = TestBed.createComponent(InputLikertScaleComponent);
+        fixture = TestBed.createComponent(InputCheckboxComponent);
         component = fixture.componentInstance;
         fixture.detectChanges();
     });

@@ -2,7 +2,7 @@ import { Component, forwardRef, Input, ViewChild, ElementRef } from '@angular/co
 import { NG_VALUE_ACCESSOR, NgModel } from '@angular/forms';
 import { NgSelectConfig } from '@ng-select/ng-select';
 
-import { InputComponent } from '../input/input.component';
+import { InputComponent } from '../../simple/input/input.component';
 
 
 @Component({
