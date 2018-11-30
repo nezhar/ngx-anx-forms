@@ -1,5 +1,5 @@
 import { Component, Input, forwardRef, ViewChild, ElementRef, OnInit, OnDestroy } from '@angular/core';
-import { NG_VALUE_ACCESSOR, NgModel, ValidationErrors } from '@angular/forms';
+import { NG_VALUE_ACCESSOR, NgModel, ValidationErrors, AbstractControl } from '@angular/forms';
 
 import { SERVER_ERROR_KEY } from '../input-error/input-error.component';
 import { NgModelValueAccessor } from '../../utils/ng-model-value-accessor';
@@ -35,7 +35,7 @@ export class InputComponent extends NgModelValueAccessor implements OnInit, OnDe
 
     @ViewChild('inputField') inputField: NgModel;
 
-    private mutationObserver: MutationObserver;
+    protected mutationObserver: MutationObserver;
     differ: any;
 
     constructor(protected elRef: ElementRef) {
@@ -54,19 +54,23 @@ export class InputComponent extends NgModelValueAccessor implements OnInit, OnDe
         return !!this.errors && (this.inputField.touched || this.errors[SERVER_ERROR_KEY]);
     }
 
+    getElementControl(): AbstractControl {
+        return this.inputField.control;
+    }
+
     subscribeOnTouchPropagation() {
         this.mutationObserver = new MutationObserver(() => {
             if (this.elRef.nativeElement.classList.contains('ng-touched')) {
-                this.inputField.control.markAsTouched();
+                this.getElementControl().markAsTouched();
             }
             if (this.elRef.nativeElement.classList.contains('ng-untouched')) {
-                this.inputField.control.markAsUntouched();
+                this.getElementControl().markAsUntouched();
             }
             if (this.elRef.nativeElement.classList.contains('ng-dirty')) {
-                this.inputField.control.markAsDirty();
+                this.getElementControl().markAsDirty();
             }
             if (this.elRef.nativeElement.classList.contains('ng-pristine')) {
-                this.inputField.control.markAsPristine();
+                this.getElementControl().markAsPristine();
             }
         });
 
