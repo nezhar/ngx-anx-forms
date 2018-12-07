@@ -48,4 +48,9 @@ export class InputSelectRadioComponent extends InputComponent implements OnInit,
     getElementControl(): AbstractControl {
         return this.inputForm;
     }
+
+    ngOnDestroy() {
+        super.ngOnDestroy();
+        this.inputFormSubscription.unsubscribe();
+    }
 }

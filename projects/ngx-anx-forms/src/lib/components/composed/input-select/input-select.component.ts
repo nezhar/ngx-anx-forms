@@ -28,6 +28,7 @@ export class InputSelectComponent extends InputComponent {
     @Input() multiple: boolean = false;
     @Input() closeOnSelect: boolean = true;
     @Input() notFoundText: string = '-';
+    @Input() clearable: boolean = true;
 
     @ViewChild('inputField') inputField: NgModel;
 
