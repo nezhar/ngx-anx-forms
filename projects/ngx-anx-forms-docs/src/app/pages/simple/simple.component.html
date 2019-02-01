@@ -1,13 +1,19 @@
-<div [formGroup]="inputForm">
-  <h3>Input component</h3>
-  <anx-forms-input
-      formControlName="input"
-      [errors]="inputForm.get('input').errors"
-  ></anx-forms-input>
-</div>
+<h3 id="input">Input</h3>
+<app-input></app-input>
+<hr class="separator">
 
-<hr>
-{{ this.inputForm.value | json }}
-<hr>
+<h3 id="textarea">Textarea</h3>
+<app-textarea></app-textarea>
+<hr class="separator">
 
-<app-form-switches [form]="inputForm"></app-form-switches>
+<h3 id="radio">Radio</h3>
+<app-radio></app-radio>
+<hr class="separator">
+
+<h3 id="checkbox">Checkbox</h3>
+<app-checkbox></app-checkbox>
+<hr class="separator">
+
+<h3 id="input-error">Input error</h3>
+<app-input-error></app-input-error>
+<hr class="separator">

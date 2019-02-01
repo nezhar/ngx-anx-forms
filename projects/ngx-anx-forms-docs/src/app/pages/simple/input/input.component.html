@@ -1,0 +1,102 @@
+<div [formGroup]="form">
+  <anx-forms-input
+      formControlName="input"
+      [errors]="form.get('input').errors"
+  ></anx-forms-input>
+</div>
+
+<h5>Value</h5>
+<pre>{{ this.form.value | json }}</pre>
+
+<app-form-switches [form]="form"></app-form-switches>
+
+<ngb-tabset>
+  <ngb-tab title="HTML">
+    <ng-template ngbTabContent>
+        <ngx-prism [language]="'html'" [code]='code.html'></ngx-prism>
+    </ng-template>
+  </ngb-tab>
+  <ngb-tab title="TypeScript">
+    <ng-template ngbTabContent>
+      <ngx-prism [language]="'typescript'" [code]='code.ts'></ngx-prism>
+    </ng-template>
+  </ngb-tab>
+</ngb-tabset>
+
+<hr>
+
+<h5>Props</h5>
+<div class="table-responsive">
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th></th>
+      <th>Description</th>
+      <th>Default</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">[id]:string</th>
+      <td>Input id</td>
+      <td>''</td>
+    </tr>
+    <tr>
+      <th scope="row">[name]:string</th>
+      <td>input name</td>
+      <td>''</td>
+    </tr>
+    <tr>
+      <th scope="row">[title]:string</th>
+      <td>input title</td>
+      <td>''</td>
+    </tr>
+    <tr>
+      <th scope="row">[type]:string</th>
+      <td>input type (text|email|number...)</td>
+      <td>'text'</td>
+    </tr>
+    <tr>
+      <th scope="row">[placeholder]:string</th>
+      <td>input placeholder</td>
+      <td>''</td>
+    </tr>
+    <tr>
+      <th scope="row">[readonly]:boolean</th>
+      <td>set field as readonly</td>
+      <td>false</td>
+    </tr>
+    <tr>
+      <th scope="row">[floatingPlaceholder]:boolean</th>
+      <td>enable floating placeholder</td>
+      <td>false</td>
+    </tr>
+
+    <tr>
+      <th scope="row">[min]:boolean</th>
+      <td>enable floating placeholder</td>
+      <td>false</td>
+    </tr>
+    <tr>
+      <th scope="row">[max]:boolean</th>
+      <td>enable floating placeholder</td>
+      <td>false</td>
+    </tr>
+    <tr>
+      <th scope="row">[step]:boolean</th>
+      <td>enable floating placeholder</td>
+      <td>false</td>
+    </tr>
+    <tr>
+      <th scope="row">[errors]:ValidationErrors</th>
+      <td>validation errors for input field</td>
+      <td>undefined</td>
+    </tr>
+    <tr>
+      <th scope="row">[errorMessages]:Object</th>
+      <td>key value pairs of error messages to be used in component instance</td>
+      <td [innerText]="'{}'"></td>
+    </tr>
+  </tbody>
+</table>
+</div>

@@ -4,3 +4,28 @@
 @import "~bootstrap/scss/bootstrap";
 @import "~ngx-anx-forms/lib/styles/ngx-anx-forms.styles";
 //@import "~ngx-anx-forms/lib/styles/themes/borderless";
+
+@import '~prismjs/themes/prism-okaidia.css';
+@import "~prismjs/plugins/toolbar/prism-toolbar.css";
+
+  
+hr.separator {
+    border-top: 4px double #8c8b8b;
+    text-align: center;
+    margin: 3rem 0;
+}
+hr.separator:after {
+    content: '</>';
+    display: inline-block;
+    position: relative;
+    top: -15px;
+    padding: 0 10px;
+    background: #f0f0f0;
+    font-size: 18px;
+}
+
+h3 {
+    border-bottom: 1px solid #eaecef;
+    padding-bottom: .3em;
+    margin-bottom: 2rem;
+}

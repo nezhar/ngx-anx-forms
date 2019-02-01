@@ -1,0 +1,30 @@
+<div [formGroup]="form">
+  <anx-forms-input-textarea
+    formControlName="input"
+    [errors]="textareaForm.get('input').errors"
+  ></anx-forms-input-textarea>
+</div>
+
+<h5>Value</h5>
+<pre>{{ this.form.value | json }}</pre>
+
+<app-form-switches [form]="form"></app-form-switches>
+
+<ngb-tabset>
+  <ngb-tab title="HTML">
+    <ng-template ngbTabContent>
+        <ngx-prism [language]="'html'" [code]='inputCode.html'></ngx-prism>
+    </ng-template>
+  </ngb-tab>
+  <ngb-tab title="TypeScript">
+    <ng-template ngbTabContent>
+      <ngx-prism [language]="'typescript'" [code]='inputCode.ts'></ngx-prism>
+    </ng-template>
+  </ngb-tab>
+</ngb-tabset>
+
+<hr>
+
+<h5>Props</h5>
+
+<p>All props of input component</p>
