@@ -8,12 +8,10 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
 })
 export class HomeComponent implements OnInit {
 
-  title = 'angular-library';
   form: FormGroup;
 
   ngOnInit() {
     this.form = new FormGroup({
-      'test_text': new FormControl('', Validators.required),
       'test_textarea': new FormControl('', Validators.required),
       'test_checkbox': new FormControl(false, Validators.requiredTrue),
       'test_radio': new FormControl(false),
@@ -31,27 +29,4 @@ export class HomeComponent implements OnInit {
     {pk: 5, label: 'Option 5'}
   ]
 
-  markAsTouched() {
-    for (let inner in this.form.controls) {
-      this.form.get(inner).markAsTouched();
-    }
-  }
-
-  markAsDirty() {
-    for (let inner in this.form.controls) {
-      this.form.get(inner).markAsDirty();
-    }
-  }
-
-  markAsUntouched() {
-    for (let inner in this.form.controls) {
-      this.form.get(inner).markAsUntouched();
-    }
-  }
-
-  markAsPrestine() {
-    for (let inner in this.form.controls) {
-      this.form.get(inner).markAsPristine();
-    }
-  }
 }

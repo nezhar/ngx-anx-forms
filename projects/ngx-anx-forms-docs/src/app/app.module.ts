@@ -7,17 +7,22 @@ import { NgxAnxFormsModule } from 'ngx-anx-forms';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './pages/home/home.component';
-import { ComponentsComponent } from './pages/components/components.component';
+import { FormSwitchesComponent } from './utils/form-switches/form-switches.component';
+import { SimpleComponent } from './pages/simple/simple.component';
+import { ComposedComponent } from './pages/composed/composed.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    ComponentsComponent,
+    FormSwitchesComponent,
+    SimpleComponent,
+    ComposedComponent,
   ],
   entryComponents: [
     HomeComponent,
-    ComponentsComponent,
+    SimpleComponent,
+    ComposedComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,13 @@
+<div [formGroup]="inputForm">
+  <h3>Input component</h3>
+  <anx-forms-input
+      formControlName="input"
+      [errors]="inputForm.get('input').errors"
+  ></anx-forms-input>
+</div>
+
+<hr>
+{{ this.inputForm.value | json }}
+<hr>
+
+<app-form-switches [form]="inputForm"></app-form-switches>

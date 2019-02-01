@@ -2,12 +2,6 @@
   <h1>Example</h1>
   <hr>
   <div [formGroup]="form">
-      <h3>Simple Input</h3>
-      <anx-forms-input
-          formControlName="test_text"
-          [errors]="form.get('test_text').errors"
-      ></anx-forms-input>
-
       <h3>Textarea</h3>
       <anx-forms-input-textarea
           formControlName="test_textarea"
@@ -70,8 +64,5 @@
   {{ this.form.value | json }}
   <hr>
 
-  <button (click)="markAsTouched()">Mark as Touched</button>
-  <button (click)="markAsDirty()">Mark as Dirty</button>
-  <button (click)="markAsUntouched()">Mark as Untouched</button>
-  <button (click)="markAsPrestine()">Mark as Prestine</button>
+  <app-form-switches [form]="form"></app-form-switches>
 </div>
