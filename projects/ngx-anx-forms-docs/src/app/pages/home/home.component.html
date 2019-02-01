@@ -1,0 +1,77 @@
+<div class="container">
+  <h1>Example</h1>
+  <hr>
+  <div [formGroup]="form">
+      <h3>Simple Input</h3>
+      <anx-forms-input
+          formControlName="test_text"
+          [errors]="form.get('test_text').errors"
+      ></anx-forms-input>
+
+      <h3>Textarea</h3>
+      <anx-forms-input-textarea
+          formControlName="test_textarea"
+          [errors]="form.get('test_textarea').errors"
+      ></anx-forms-input-textarea>
+      
+      <h3>Checkbox</h3>
+      <anx-forms-input-checkbox
+          formControlName="test_checkbox"
+          [errors]="form.get('test_checkbox').errors"
+      >
+          <span>
+              Custom <b>Label</b>
+          </span>
+      </anx-forms-input-checkbox>
+
+      <h3>Radio</h3>
+      <anx-forms-input-radio formControlName="test_radio" [radioValue]="0">
+          <span>
+              Custom <b>Label 1</b>
+          </span>
+      </anx-forms-input-radio>
+      <br>
+      <anx-forms-input-radio formControlName="test_radio" [radioValue]="1">
+          <span>
+              Custom <b>Label 2</b>
+          </span>
+      </anx-forms-input-radio>
+
+      <h3>Select dropdown</h3>
+      <anx-forms-input-select
+          [options]="selectOptions"
+          bindLabel='label'
+          bindValue='pk'
+          formControlName="test_select"
+          [errors]="form.get('test_select').errors"
+      ></anx-forms-input-select>
+
+      <h3>Select checkbox</h3>
+      <anx-forms-input-select-checkbox
+              [options]="selectOptions"
+              [bindValue]="'pk'"
+              [bindLabel]="'label'"
+              [errors]="form.get('test_select_checkbox').errors"
+              formControlName="test_select_checkbox"
+      ></anx-forms-input-select-checkbox>
+      
+      <h3>Select radio</h3>
+      <anx-forms-input-select-radio
+          [options]="selectOptions"
+          [bindValue]="'pk'"
+          [bindLabel]="'label'"
+          [errors]="form.get('test_select_radio').errors"
+          formControlName="test_select_radio"
+      ></anx-forms-input-select-radio>
+
+  </div>
+
+  <hr>
+  {{ this.form.value | json }}
+  <hr>
+
+  <button (click)="markAsTouched()">Mark as Touched</button>
+  <button (click)="markAsDirty()">Mark as Dirty</button>
+  <button (click)="markAsUntouched()">Mark as Untouched</button>
+  <button (click)="markAsPrestine()">Mark as Prestine</button>
+</div>
