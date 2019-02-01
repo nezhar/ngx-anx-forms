@@ -1,4 +1,5 @@
-cd projects/ngx-anx-forms
+#!/bin/bash
 bash build.sh
-cd ../../dist/ngx-anx-forms
-npm publish
+
+#cd ./dist/ngx-anx-forms
+#npm publish
