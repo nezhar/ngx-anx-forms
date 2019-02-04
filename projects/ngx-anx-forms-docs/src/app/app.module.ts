@@ -30,6 +30,7 @@ import { TextareaComponent } from './pages/simple/textarea/textarea.component';
 import { RadioComponent } from './pages/simple/radio/radio.component';
 import { CheckboxComponent } from './pages/simple/checkbox/checkbox.component';
 import { InputErrorComponent } from './pages/simple/input-error/input-error.component';
+import { PropTableComponent } from './utils/prop-table/prop-table.component';
 
 @NgModule({
   declarations: [
@@ -43,6 +44,7 @@ import { InputErrorComponent } from './pages/simple/input-error/input-error.comp
     RadioComponent,
     CheckboxComponent,
     InputErrorComponent,
+    PropTableComponent,
   ],
   entryComponents: [
     HomeComponent,

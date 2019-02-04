@@ -1,0 +1,22 @@
+<div class="table-responsive">
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Example</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let prop of props">
+        <th scope="row">[{{ prop.name }}]</th>
+        <td><pre>{{ prop.type }}</pre></td>
+        <td>{{ prop.description }}</td>
+        <td><pre>{{ prop.example }}</pre></td>
+        <td><pre>{{ prop.default }}</pre></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
