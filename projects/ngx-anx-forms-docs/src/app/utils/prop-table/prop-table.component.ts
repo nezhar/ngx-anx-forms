@@ -11,7 +11,6 @@ export interface TableProp {
 @Component({
   selector: 'app-prop-table',
   templateUrl: './prop-table.component.html',
-  styleUrls: ['./prop-table.component.css']
 })
 export class PropTableComponent {
   @Input() props: TableProp[] = [];

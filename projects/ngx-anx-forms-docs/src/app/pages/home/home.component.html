@@ -1,63 +1,68 @@
-<div class="container">
-  <h1>Example</h1>
-  <hr>
-  <div [formGroup]="form">
-      
-      <h3>Checkbox</h3>
-      <anx-forms-input-checkbox
-          formControlName="test_checkbox"
-          [errors]="form.get('test_checkbox').errors"
-      >
-          <span>
-              Custom <b>Label</b>
-          </span>
-      </anx-forms-input-checkbox>
+<h3>What is this</h3>
+<p><b>ngx-anx-forms</b> is a collection of form components and form utilities for <b>Angular</b>.
+</p>
+<hr>
 
-      <h3>Radio</h3>
-      <anx-forms-input-radio formControlName="test_radio" [radioValue]="0">
-          <span>
-              Custom <b>Label 1</b>
-          </span>
-      </anx-forms-input-radio>
-      <br>
-      <anx-forms-input-radio formControlName="test_radio" [radioValue]="1">
-          <span>
-              Custom <b>Label 2</b>
-          </span>
-      </anx-forms-input-radio>
+<h3>Dependencies</h3>
+<p>This repository contains a set of native Angular forms based on Bootstrap's markup and CSS.</p>
+<table class="table" style="width: auto">
+  <thead>
+  <tr>
+    <th scope="col">Library</th>
+    <th scope="col">Angular</th>
+    <th scope="col">Bootstrap CSS</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <th scope="row">0.1.x</th>
+    <td>6.x.x</td>
+    <td>4.1.x</td>
+  </tr>
+  </tbody>
+</table>
 
-      <h3>Select dropdown</h3>
-      <anx-forms-input-select
-          [options]="selectOptions"
-          bindLabel='label'
-          bindValue='pk'
-          formControlName="test_select"
-          [errors]="form.get('test_select').errors"
-      ></anx-forms-input-select>
+<h3>Installation</h3>
+<p>
+  You can install the library using you favorite package manager:
+</p>
 
-      <h3>Select checkbox</h3>
-      <anx-forms-input-select-checkbox
-              [options]="selectOptions"
-              [bindValue]="'pk'"
-              [bindLabel]="'label'"
-              [errors]="form.get('test_select_checkbox').errors"
-              formControlName="test_select_checkbox"
-      ></anx-forms-input-select-checkbox>
-      
-      <h3>Select radio</h3>
-      <anx-forms-input-select-radio
-          [options]="selectOptions"
-          [bindValue]="'pk'"
-          [bindLabel]="'label'"
-          [errors]="form.get('test_select_radio').errors"
-          formControlName="test_select_radio"
-      ></anx-forms-input-select-radio>
+<h5>npm</h5>
+<ngx-prism [language]="'bash'" code='npm install ngx-anx-forms --save'></ngx-prism>
 
-  </div>
+<h5>yarn</h5>
+<ngx-prism [language]="'bash'" code='yarn add ngx-anx-forms'></ngx-prism>
 
-  <hr>
-  {{ this.form.value | json }}
-  <hr>
+<br>
+<p>After the instalation you have to import the main module:</p>
+<ngx-prism [language]="'typescript'" [code]="moduleImportMain"></ngx-prism>
 
-  <app-form-switches [form]="form"></app-form-switches>
-</div>
+<br>
+<p>And in your local module:</p>
+<ngx-prism [language]="'typescript'" [code]="moduleImportMain"></ngx-prism>
+<br>
+
+<p>Load bootstrap and form styles</p>
+<ngx-prism language="css">@import "~bootstrap/scss/bootstrap";
+@import "~ngx-anx-forms/lib/styles/ngx-anx-forms.styles";
+</ngx-prism>
+<br>
+
+<p><b>Optional:</b> Load a form theme</p>
+<ngx-prism language="css">@import "~ngx-anx-forms/lib/styles/themes/borderless";</ngx-prism>
+<br>
+
+<h3>Supported browsers</h3>
+<p>The library strives to support the same browsers and versions supported by Bootstrap 4 and Angular:</p>
+<ul>
+  <li>
+    <a href="https://angular.io/guide/browser-support" target="_blank">
+      https://angular.io/guide/browser-support
+    </a>
+  </li>
+  <li>
+    <a href="https://getbootstrap.com/docs/4.0/getting-started/browsers-devices/" target="_blank">
+      https://getbootstrap.com/docs/4.0/getting-started/browsers-devices/
+    </a>
+  </li>
+</ul>

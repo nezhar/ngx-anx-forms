@@ -3,6 +3,8 @@ import { DocumentaryConfig } from 'ngx-documentary';
 import { HomeComponent } from './pages/home/home.component';
 import { SimpleComponent } from './pages/simple/simple.component';
 import { ComposedComponent } from './pages/composed/composed.component';
+import { ErrorMessagesComponent } from './pages/error-messages/error-messages.component';
+import { ErrorMapperComponent } from './pages/error-mapper/error-mapper.component';
 
 
 export const config: DocumentaryConfig = {
@@ -85,6 +87,20 @@ export const config: DocumentaryConfig = {
             href: 'distributed-multiple-choice',
           },
         ]
+      }
+    },
+    {
+      path: 'error-messages',
+      component: ErrorMessagesComponent,
+      data: {
+        name: 'Error messages'
+      }
+    },
+    {
+      path: 'error-mapper',
+      component: ErrorMapperComponent,
+      data: {
+        name: 'Error mapper'
       }
     }
   ],

@@ -1,0 +1,58 @@
+<h3>Error messages</h3>
+<p>
+  By default the library comes with a set of messages to display errors.
+</p>
+
+<div class="table-responsive">
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Error</th>
+        <th>Message</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">required</th>
+        <td>This field is required</td>
+      </tr>
+      <tr>
+        <th scope="row">email</th>
+        <td>Please insert a valid email</td>
+      </tr>
+      <tr>
+        <th scope="row">min</th>
+        <td>Please insert a higher value</td>
+      </tr>
+      <tr>
+        <th scope="row">max</th>
+        <td>'Please insert a lower value'</td>
+      </tr>
+      <tr>
+        <th scope="row">*unknown</th>
+        <td>Unknown error: unknown</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<p>*Any other message will be mapped as unknown error.</p>
+
+
+<h3>Custom messages</h3>
+<p>You can define custom error messages in each component instance using the <b>[errorMessages]</b> prop. However,
+  you may need to define the messages for all forms and not provide them on every instance.</p>
+<p>You can achieve this by creating a custom ErrorMessageService:</p>
+
+<ngx-prism [language]="'typescript'" [code]="serviceCode"></ngx-prism>
+
+<br>
+<p>And provide the service in <b>NgxAnxFormsModule.forRoot</b> in the AppModule</p>
+
+<ngx-prism [language]="'typescript'" [code]="serviceProvide"></ngx-prism>
+
+<br>
+<h3>Translate messages</h3>
+<p>You can use an external library such as <a href="http://www.ngx-translate.com/" target="_blank">ngx-translate</a> to
+  translate the error messages</p>
+<ngx-prism [language]="'typescript'" [code]="serviceCodeTranslated"></ngx-prism>

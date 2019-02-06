@@ -5,7 +5,6 @@ import { InputProps } from '../input/input.component';
 @Component({
   selector: 'app-textarea',
   templateUrl: './textarea.component.html',
-  styleUrls: ['./textarea.component.scss']
 })
 export class TextareaComponent implements OnInit {
 

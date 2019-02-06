@@ -1,32 +1,34 @@
-import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss']
 })
-export class HomeComponent implements OnInit {
+export class HomeComponent {
 
-  form: FormGroup;
+  moduleImportMain = `import { NgxAnxFormsModule } from 'ngx-anx-forms';
+@NgModule({
+  ...
+  imports: [
+    NgxAnxFormsModule.forRoot(),
+    ...
+  ],
+  ...
+})
+export class AppModule {
+}`;
 
-  ngOnInit() {
-    this.form = new FormGroup({
-      'test_textarea': new FormControl('', Validators.required),
-      'test_checkbox': new FormControl(false, Validators.requiredTrue),
-      'test_radio': new FormControl(false),
-      'test_select': new FormControl(null, Validators.required),
-      'test_select_checkbox': new FormControl([], Validators.required),
-      'test_select_radio': new FormControl(null, Validators.required),
-    });
-  }
+  moduleImport = `import { NgxAnxFormsModule } from 'ngx-anx-forms';
+@NgModule({
+  ...
+  imports: [
+    NgxAnxFormsModule,
+    ...
+  ],
+  ...
+})
+export class YourAppModule {
+}`;
 
-  selectOptions = [
-    {pk: 1, label: 'Option 1'},
-    {pk: 2, label: 'Option 2'},
-    {pk: 3, label: 'Option 3'},
-    {pk: 4, label: 'Option 4'},
-    {pk: 5, label: 'Option 5'}
-  ]
 
 }

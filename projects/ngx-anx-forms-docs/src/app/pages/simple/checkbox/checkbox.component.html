@@ -1,3 +1,33 @@
-<p>
-  checkbox works!
-</p>
+<div [formGroup]="form">
+  <anx-forms-input-checkbox
+      formControlName="simple"
+      [errors]="form.get('simple').errors"
+  >
+      <span>
+          Custom <b>Label</b>
+      </span>
+  </anx-forms-input-checkbox>
+</div>
+
+<h5>Value</h5>
+<pre>{{ this.form.value | json }}</pre>
+
+<app-form-switches [form]="form"></app-form-switches>
+
+<div class="mb-3 d-block">
+  <ngb-tabset>
+    <ngb-tab title="HTML">
+      <ng-template ngbTabContent>
+          <ngx-prism [language]="'html'" [code]='code.html'></ngx-prism>
+      </ng-template>
+    </ngb-tab>
+    <ngb-tab title="TypeScript">
+      <ng-template ngbTabContent>
+        <ngx-prism [language]="'typescript'" [code]='code.ts'></ngx-prism>
+      </ng-template>
+    </ngb-tab>
+  </ngb-tabset>
+</div>
+
+<h5>Props</h5>
+<app-prop-table [props]="props"></app-prop-table>

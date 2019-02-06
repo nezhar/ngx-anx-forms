@@ -31,6 +31,14 @@ import { RadioComponent } from './pages/simple/radio/radio.component';
 import { CheckboxComponent } from './pages/simple/checkbox/checkbox.component';
 import { InputErrorComponent } from './pages/simple/input-error/input-error.component';
 import { PropTableComponent } from './utils/prop-table/prop-table.component';
+import { ErrorMessagesComponent } from './pages/error-messages/error-messages.component';
+import { ErrorMapperComponent } from './pages/error-mapper/error-mapper.component';
+import { IconInputComponent } from './pages/composed/icon-input/icon-input.component';
+import { SelectComponent } from './pages/composed/select/select.component';
+import { SelectRadioComponent } from './pages/composed/select-radio/select-radio.component';
+import { SelectCheckboxComponent } from './pages/composed/select-checkbox/select-checkbox.component';
+import { LikertScaleComponent } from './pages/composed/likert-scale/likert-scale.component';
+import { DistributedMultipleChoiceComponent } from './pages/composed/distributed-multiple-choice/distributed-multiple-choice.component';
 
 @NgModule({
   declarations: [
@@ -45,11 +53,21 @@ import { PropTableComponent } from './utils/prop-table/prop-table.component';
     CheckboxComponent,
     InputErrorComponent,
     PropTableComponent,
+    ErrorMessagesComponent,
+    ErrorMapperComponent,
+    IconInputComponent,
+    SelectComponent,
+    SelectRadioComponent,
+    SelectCheckboxComponent,
+    LikertScaleComponent,
+    DistributedMultipleChoiceComponent,
   ],
   entryComponents: [
     HomeComponent,
     SimpleComponent,
     ComposedComponent,
+    ErrorMessagesComponent,
+    ErrorMapperComponent,
   ],
   imports: [
     BrowserModule,

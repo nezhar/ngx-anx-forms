@@ -4,7 +4,6 @@ import { FormGroup } from '@angular/forms';
 @Component({
   selector: 'app-form-switches',
   templateUrl: './form-switches.component.html',
-  styleUrls: ['./form-switches.component.scss']
 })
 export class FormSwitchesComponent {
 

@@ -1,12 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { InputProps } from '../input/input.component';
+import { InputProps } from '../../simple/input/input.component';
 
 @Component({
-  selector: 'app-radio',
-  templateUrl: './radio.component.html',
+  selector: 'app-icon-input',
+  templateUrl: './icon-input.component.html',
 })
-export class RadioComponent implements OnInit {
+export class IconInputComponent implements OnInit {
 
   form: FormGroup;
   code = {

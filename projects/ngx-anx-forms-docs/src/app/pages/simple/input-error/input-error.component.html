@@ -1,3 +1,29 @@
-<p>
-  input-error works!
-</p>
+<div>
+  <anx-forms-input-error
+      [errors]="errors"
+      [errorMessages]="errorMessages"
+  ></anx-forms-input-error>
+</div>
+
+<hr>
+<p>You can use the errors provided by the Angular Validators and forward them. You can also provide custom error
+  messages or forward error messages received from an external source with the <b>serverErrors</b> key.</p>
+
+<div class="mb-3 d-block">
+  <ngb-tabset>
+    <ngb-tab title="HTML">
+      <ng-template ngbTabContent>
+          <ngx-prism [language]="'html'" [code]='code.html'></ngx-prism>
+      </ng-template>
+    </ngb-tab>
+    <ngb-tab title="TypeScript">
+      <ng-template ngbTabContent>
+        <ngx-prism [language]="'typescript'" [code]='code.ts'></ngx-prism>
+      </ng-template>
+    </ngb-tab>
+  </ngb-tabset>
+</div>
+
+<h5>Props</h5>
+<app-prop-table [props]="props"></app-prop-table>
+
