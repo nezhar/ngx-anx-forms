@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { InputProps } from '../../simple/input/input.component';
+import { faCoffee, faCat } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-icon-input',
@@ -12,49 +13,42 @@ export class IconInputComponent implements OnInit {
   code = {
     ts: `this.form = new FormGroup({
   simple: new FormControl('', Validators.required),
+  advanced: new FormControl('', Validators.required),
 });`,
     html: `<div [formGroup]="form">
-  <anx-forms-input-radio formControlName="simple" [radioValue]="null">
-      <span>
-          Custom <b>Label 1</b>
-      </span>
-  </anx-forms-input-radio>
-  <br>
-  <anx-forms-input-radio formControlName="simple" [radioValue]="1">
-      <span>
-          Custom <b>Label 2</b>
-      </span>
-  </anx-forms-input-radio>
-  <br>
-  <anx-forms-input-radio formControlName="simple" [radioValue]="'Test'">
-      <span>
-          Custom <b>Label 3</b>
-      </span>
-  </anx-forms-input-radio>
-</div>
-`
+  <span>Simple</span>
+  <anx-forms-icon-input
+    formControlName="simple"
+    [errors]="form.get('simple').errors"
+  >
+    <fa-icon [icon]="faCoffee"></fa-icon>
+  </anx-forms-icon-input>
+
+  <anx-forms-icon-input
+    formControlName="advanced"
+    [errors]="form.get('advanced').errors"
+    [errorMessages]="{required: 'Please fill up this field'}"
+    [placeholder]="'Advanced'"
+    [floatingPlaceholder]="true"
+    [id]="'advanced-input'"
+    [name]="'advanced'"
+    [title]="'Advanced input'"
+    [type]="'email'"
+  >
+    <fa-icon [icon]="faCat"></fa-icon>
+  </anx-forms-icon-input>
+</div>`
   };
 
   props = InputProps.slice();
 
+  faCat = faCat;
+  faCoffee = faCoffee;
+
   ngOnInit() {
-    this.props.splice(this.props.findIndex(prop => prop.name === 'type'), 1);
-    this.props.splice(this.props.findIndex(prop => prop.name === 'min'), 1);
-    this.props.splice(this.props.findIndex(prop => prop.name === 'max'), 1);
-    this.props.splice(this.props.findIndex(prop => prop.name === 'step'), 1);
-    this.props.splice(this.props.findIndex(prop => prop.name === 'placeholder'), 1);
-    this.props.splice(this.props.findIndex(prop => prop.name === 'floatingPlaceholder'), 1);
-
-    this.props.push({
-      name: 'radioValue',
-      type: 'any',
-      description: 'Value of selected radio button',
-      example: '[radioValue]="\'Value\'"',
-      default: '\'\''
-    });
-
     this.form = new FormGroup({
       simple: new FormControl('', Validators.required),
+      advanced: new FormControl('', Validators.required),
     });
   }
 

@@ -39,6 +39,7 @@ import { SelectRadioComponent } from './pages/composed/select-radio/select-radio
 import { SelectCheckboxComponent } from './pages/composed/select-checkbox/select-checkbox.component';
 import { LikertScaleComponent } from './pages/composed/likert-scale/likert-scale.component';
 import { DistributedMultipleChoiceComponent } from './pages/composed/distributed-multiple-choice/distributed-multiple-choice.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   declarations: [
@@ -77,6 +78,7 @@ import { DistributedMultipleChoiceComponent } from './pages/composed/distributed
     NgxAnxFormsModule.forRoot(),
     DocumentaryModule,
     PrismModule,
+    FontAwesomeModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

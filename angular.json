@@ -82,7 +82,9 @@
             "styles": [
               "projects/ngx-anx-forms-docs/src/styles.scss"
             ],
-            "scripts": [],
+            "scripts": [
+              "./node_modules/prismjs/prism.js"
+            ],
             "es5BrowserSupport": true
           },
           "configurations": {

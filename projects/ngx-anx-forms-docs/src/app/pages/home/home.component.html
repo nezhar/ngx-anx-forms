@@ -11,6 +11,7 @@
     <th scope="col">Library</th>
     <th scope="col">Angular</th>
     <th scope="col">Bootstrap CSS</th>
+    <th scope="col">ng-select</th>
   </tr>
   </thead>
   <tbody>
@@ -18,6 +19,7 @@
     <th scope="row">0.1.x</th>
     <td>6.x.x</td>
     <td>4.1.x</td>
+    <td>2.12.1</td>
   </tr>
   </tbody>
 </table>
@@ -27,13 +29,23 @@
   You can install the library using you favorite package manager:
 </p>
 
-<h5>npm</h5>
-<ngx-prism [language]="'bash'" code='npm install ngx-anx-forms --save'></ngx-prism>
+<b>NPM</b>
+<ngx-prism [language]="'bash'">npm install ngx-anx-forms --save</ngx-prism>
 
-<h5>yarn</h5>
-<ngx-prism [language]="'bash'" code='yarn add ngx-anx-forms'></ngx-prism>
-
+<b>YARN</b>
+<ngx-prism [language]="'bash'">yarn add ngx-anx-forms</ngx-prism>
 <br>
+
+<h5>Install peer dependencies</h5>
+<b>NPM</b>
+<ngx-prism [language]="'bash'">npm install @ng-select/ng-select --save
+npm install bootstrap --save</ngx-prism>
+
+<b>YARN</b>
+<ngx-prism [language]="'bash'">yarn add @ng-select/ng-select
+yarn add bootstrap</ngx-prism>
+<br>
+
 <p>After the instalation you have to import the main module:</p>
 <ngx-prism [language]="'typescript'" [code]="moduleImportMain"></ngx-prism>
 

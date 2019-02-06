@@ -79,7 +79,7 @@ export const config: DocumentaryConfig = {
             href: 'select-checkbox',
           },
           {
-            name: 'Liker scale',
+            name: 'Likert scale',
             href: 'likert-scale',
           },
           {
