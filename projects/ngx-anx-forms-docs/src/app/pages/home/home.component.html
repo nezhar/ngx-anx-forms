@@ -46,12 +46,13 @@ npm install bootstrap --save</ngx-prism>
 yarn add bootstrap</ngx-prism>
 <br>
 
-<p>After the instalation you have to import the main module:</p>
+<p>After the installation you have to import the main module (make sure to also add the NgSelectModule, Angular
+  needs this to add ng-select in the production build):</p>
 <ngx-prism [language]="'typescript'" [code]="moduleImportMain"></ngx-prism>
 
 <br>
 <p>And in your local module:</p>
-<ngx-prism [language]="'typescript'" [code]="moduleImportMain"></ngx-prism>
+<ngx-prism [language]="'typescript'" [code]="moduleImport"></ngx-prism>
 <br>
 
 <p>Load bootstrap and form styles</p>
