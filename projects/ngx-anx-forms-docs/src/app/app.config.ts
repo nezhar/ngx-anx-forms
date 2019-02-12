@@ -104,6 +104,6 @@ export const config: DocumentaryConfig = {
       }
     }
   ],
-  currentVersion: '0.1.1',
+  currentVersion: '0.2.0',
   versions: []
 };

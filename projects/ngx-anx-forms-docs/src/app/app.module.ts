@@ -40,7 +40,6 @@ import { SelectCheckboxComponent } from './pages/composed/select-checkbox/select
 import { LikertScaleComponent } from './pages/composed/likert-scale/likert-scale.component';
 import { DistributedMultipleChoiceComponent } from './pages/composed/distributed-multiple-choice/distributed-multiple-choice.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { NgSelectModule } from '@ng-select/ng-select';
 
 @NgModule({
   declarations: [
@@ -80,7 +79,6 @@ import { NgSelectModule } from '@ng-select/ng-select';
     DocumentaryModule,
     PrismModule,
     FontAwesomeModule,
-    NgSelectModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
