@@ -29,8 +29,8 @@
   color: transparent;
 }
 
-.form-label-float input:not(:placeholder-shown) ~ label,
-.form-label-float textarea:not(:placeholder-shown) ~ label {
+.form-label-float input:not([ng-reflect-model=""]) ~ label,
+.form-label-float textarea:not([ng-reflect-model=""]) ~ label {
   font-size: 0.75rem;
   transform: translateY(-50%);
   background-color: #FFFFFF;
