@@ -1,4 +1,4 @@
-<div class="form-group" [ngClass]="{'form-label-float': floatingPlaceholder}">
+<div class="form-group" [ngClass]="{'form-label-float': floatingPlaceholder, 'empty': !value}">
     <textarea
             #inputField="ngModel"
             class="form-control"

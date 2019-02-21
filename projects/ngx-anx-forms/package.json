@@ -1,7 +1,7 @@
 {
   "name": "ngx-anx-forms",
   "license": "MIT",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "peerDependencies": {
     "@ng-select/ng-select": "~2.12.1",
     "@angular/common": "^7.0.0",
