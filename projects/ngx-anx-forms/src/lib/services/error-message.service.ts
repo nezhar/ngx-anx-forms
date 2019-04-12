@@ -1,10 +1,10 @@
 import { Injectable } from '@angular/core';
 
-export abstract class ErrorMessageService {
+export interface ErrorMessageService {
     /**
      * A function that handles error messages.
      */
-    abstract handle(type: string): string;
+    handle(type: string): string;
 }
 
 /**
