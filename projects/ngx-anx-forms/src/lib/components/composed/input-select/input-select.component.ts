@@ -30,7 +30,7 @@ export class InputSelectComponent extends InputComponent {
     @Input() notFoundText = '-';
     @Input() clearable = true;
 
-    @ViewChild('inputField') inputField: NgModel;
+    @ViewChild('inputField', {static: false}) inputField: NgModel;
 
     constructor(protected elRef: ElementRef,
                 private config: NgSelectConfig) {

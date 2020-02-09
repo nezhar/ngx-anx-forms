@@ -33,7 +33,7 @@ export class InputComponent extends NgModelValueAccessor implements OnInit, OnDe
     @Input() public errorMessages: Object = {};
     @Input() public errors: ValidationErrors;
 
-    @ViewChild('inputField') inputField: NgModel;
+    @ViewChild('inputField', {static: false}) inputField: NgModel;
 
     protected mutationObserver: MutationObserver;
     differ: any;
