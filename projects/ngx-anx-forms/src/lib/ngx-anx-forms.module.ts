@@ -62,11 +62,11 @@ export interface NgxAnxFormsConfig {
     schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
 })
 export class NgxAnxFormsModule {
-    static forRoot(config: NgxAnxFormsConfig = {}): ModuleWithProviders {
+    static forRoot(config: NgxAnxFormsConfig = {}): ModuleWithProviders<NgxAnxFormsModule> {
         return {
             ngModule: NgxAnxFormsModule,
             providers: [
-                config.errorMessageService || {provide: {} as ErrorMessageService, useClass: DefaultErrorMessageService},
+                config.errorMessageService || {provide: ErrorMessageService, useClass: DefaultErrorMessageService},
             ]
         };
     }
