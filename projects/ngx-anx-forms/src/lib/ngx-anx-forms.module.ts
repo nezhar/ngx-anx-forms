@@ -36,12 +36,12 @@ export interface NgxAnxFormsConfig {
     exports: [
         InputErrorComponent,
         InputComponent,
-        IconInputComponent,
         InputCheckboxComponent,
-        InputSelectComponent,
-        InputLikertScaleComponent,
         InputTextareaComponent,
         InputRadioComponent,
+        IconInputComponent,
+        InputSelectComponent,
+        InputLikertScaleComponent,
         InputDistributedMultipleChoiceComponent,
         InputSelectCheckboxComponent,
         InputSelectRadioComponent,
@@ -49,12 +49,12 @@ export interface NgxAnxFormsConfig {
     declarations: [
         InputErrorComponent,
         InputComponent,
-        IconInputComponent,
         InputCheckboxComponent,
-        InputSelectComponent,
-        InputLikertScaleComponent,
         InputTextareaComponent,
         InputRadioComponent,
+        IconInputComponent,
+        InputSelectComponent,
+        InputLikertScaleComponent,
         InputDistributedMultipleChoiceComponent,
         InputSelectCheckboxComponent,
         InputSelectRadioComponent,
@@ -66,7 +66,7 @@ export class NgxAnxFormsModule {
         return {
             ngModule: NgxAnxFormsModule,
             providers: [
-                config.errorMessageService || {provide: ErrorMessageService, useClass: DefaultErrorMessageService},
+                config.errorMessageService || {provide: {} as ErrorMessageService, useClass: DefaultErrorMessageService},
             ]
         };
     }
