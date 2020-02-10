@@ -13,7 +13,12 @@
           "builder": "@angular-devkit/build-ng-packagr:build",
           "options": {
             "tsConfig": "projects/ngx-anx-forms/tsconfig.lib.json",
-            "project": "projects/ngx-anx-forms/ng-package.json"
+            "project": "projects/ngx-anx-forms/ng-package.json",
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/ngx-anx-forms/tsconfig.lib.prod.json"
+            }
           }
         },
         "test": {

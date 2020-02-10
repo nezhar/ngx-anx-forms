@@ -23,6 +23,7 @@ describe('InputErrorComponent', () => {
     beforeEach(() => {
         fixture = TestBed.createComponent(InputErrorComponent);
         component = fixture.componentInstance;
+        component.errors = {invalid: true};
         fixture.detectChanges();
     });
 

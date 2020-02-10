@@ -24,16 +24,16 @@ export class InputSelectComponent extends InputComponent {
     @Input() options: {}[];
     @Input() bindLabel: string;
     @Input() bindValue: string;
-    @Input() placeholder: string = '';
-    @Input() multiple: boolean = false;
-    @Input() closeOnSelect: boolean = true;
-    @Input() notFoundText: string = '-';
-    @Input() clearable: boolean = true;
+    @Input() placeholder = '';
+    @Input() multiple = false;
+    @Input() closeOnSelect = true;
+    @Input() notFoundText = '-';
+    @Input() clearable = true;
 
     @ViewChild('inputField') inputField: NgModel;
 
     constructor(protected elRef: ElementRef,
-                 private config: NgSelectConfig) {
+                private config: NgSelectConfig) {
         super(elRef);
         this.config.notFoundText = '-';
     }

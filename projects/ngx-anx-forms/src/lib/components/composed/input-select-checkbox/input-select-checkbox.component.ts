@@ -34,10 +34,8 @@ export class InputSelectCheckboxComponent extends InputComponent implements  OnI
         for (const option of this.options) {
             options.push(
                 new FormGroup({
-                    'value': new FormControl(option[this.bindValue]),
-                    'selected': new FormControl(
-                        false
-                    )
+                    value: new FormControl(option[this.bindValue]),
+                    selected: new FormControl(false)
                 })
             );
         }
@@ -52,7 +50,8 @@ export class InputSelectCheckboxComponent extends InputComponent implements  OnI
     writeValue(value: any): void {
         // Add initial value to reactive form after load
         if (!this.value) {
-            for (const option of this.inputForm.get('options')['controls']) {
+            const options = this.inputForm.get('options') as FormArray;
+            for (const option of options.controls) {
                 if (value.indexOf(option.get('value').value) !== -1) {
                     option.get('selected').setValue(true);
                 }

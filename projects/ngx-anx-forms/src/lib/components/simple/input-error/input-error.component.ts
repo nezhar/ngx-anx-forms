@@ -1,6 +1,5 @@
 import { Component, Input, OnChanges, SimpleChanges } from '@angular/core';
 import { ValidationErrors } from '@angular/forms';
-
 import { ErrorMessageService } from '../../../services/error-message.service';
 
 
@@ -16,7 +15,7 @@ export const SERVER_ERROR_KEY = 'serverErrors';
 export class InputErrorComponent implements OnChanges {
 
     @Input() public errors: ValidationErrors;
-    @Input() public errorMessages: Object = {};
+    @Input() public errorMessages = {};
 
     errorsToDisplay: string[] = [];
 
@@ -24,7 +23,7 @@ export class InputErrorComponent implements OnChanges {
     }
 
     ngOnChanges(changes: SimpleChanges) {
-        if (changes['errors']) {
+        if (changes.errors) {
             this.errorsToDisplay = this.getErrorMessages();
         }
     }
