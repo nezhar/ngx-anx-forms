@@ -1,0 +1,40 @@
+name: Library Build
+
+on: [push, pull_request]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [13.x]
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v1
+      with:
+        node-version: ${{ matrix.node-version }}
+
+    - run: npm install
+
+    - name: Build library
+      run: ./build.sh
+      env:
+        CI: true
+
+    - name: Install build library
+      run: npm install dist/ngx-anx-forms
+
+    - name: Build docs
+      run: npm run build_docs
+      env:
+        CI: true
+
+    - name: Create docs artifact
+      uses: actions/upload-artifact@v1
+      with:
+        name: docs
+        path: dist/ngx-anx-forms-docs
