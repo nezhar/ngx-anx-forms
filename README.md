@@ -6,6 +6,8 @@ This package is published on [npm](https://www.npmjs.com/package/ngx-anx-forms)
 npm install ngx-anx-forms
 ```
 
+Documentation is available [here](https://anx-hnezbeda.github.io/ngx-anx-forms/)
+
 ## Development
 
 ### Bundle library 
