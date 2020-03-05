@@ -1,5 +1,5 @@
 import { Component, forwardRef, Input } from '@angular/core';
-import { NG_VALUE_ACCESSOR } from '@angular/forms';
+import { NG_VALUE_ACCESSOR, AbstractControl } from '@angular/forms';
 
 import { InputComponent } from '../../simple/input/input.component';
 
@@ -24,4 +24,8 @@ export class InputLikertScaleComponent extends InputComponent {
     @Input() public maxAnswerInfo: string;
 
     counter = Array;
+
+    getElementControl(): AbstractControl {
+        return null;
+    }
 }

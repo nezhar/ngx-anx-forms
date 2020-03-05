@@ -33,7 +33,7 @@ export class InputComponent extends NgModelValueAccessor implements OnInit, OnDe
     @Input() public errorMessages: Object = {};
     @Input() public errors: ValidationErrors;
 
-    @ViewChild('inputField') inputField: NgModel;
+    @ViewChild('inputField', { static: true }) inputField: NgModel;
 
     protected mutationObserver: MutationObserver;
     differ: any;
@@ -60,17 +60,19 @@ export class InputComponent extends NgModelValueAccessor implements OnInit, OnDe
 
     subscribeOnTouchPropagation() {
         this.mutationObserver = new MutationObserver(() => {
-            if (this.elRef.nativeElement.classList.contains('ng-touched')) {
-                this.getElementControl().markAsTouched();
-            }
-            if (this.elRef.nativeElement.classList.contains('ng-untouched')) {
-                this.getElementControl().markAsUntouched();
-            }
-            if (this.elRef.nativeElement.classList.contains('ng-dirty')) {
-                this.getElementControl().markAsDirty();
-            }
-            if (this.elRef.nativeElement.classList.contains('ng-pristine')) {
-                this.getElementControl().markAsPristine();
+            if (this.getElementControl()) {
+                if (this.elRef.nativeElement.classList.contains('ng-touched')) {
+                    this.getElementControl().markAsTouched();
+                }
+                if (this.elRef.nativeElement.classList.contains('ng-untouched')) {
+                    this.getElementControl().markAsUntouched();
+                }
+                if (this.elRef.nativeElement.classList.contains('ng-dirty')) {
+                    this.getElementControl().markAsDirty();
+                }
+                if (this.elRef.nativeElement.classList.contains('ng-pristine')) {
+                    this.getElementControl().markAsPristine();
+                }
             }
         });
 

@@ -6,7 +6,7 @@
     "start": "ng serve",
     "build": "ng build",
     "build_library": "ng build ngx-anx-forms --prod",
-    "build_docs": "ng build ngx-anx-forms-docs --prod",
+    "build_docs": "ng build ngx-anx-forms-docs --prod --baseHref=/ngx-anx-forms/",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
