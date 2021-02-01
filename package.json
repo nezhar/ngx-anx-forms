@@ -25,7 +25,7 @@
     "@fortawesome/fontawesome-svg-core": "^1.2.34",
     "@fortawesome/free-solid-svg-icons": "^5.15.2",
     "@ng-bootstrap/ng-bootstrap": "^5.3.0",
-    "@ng-select/ng-select": "^5.1.0",
+    "@ng-select/ng-select": "^6.0.0",
     "@ngx-prism/core": "^2.0.1",
     "@ngx-prism/rxjs": "^0.1.5",
     "@nicky-lenaers/ngx-scroll-to": "^3.0.1",
