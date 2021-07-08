@@ -29,7 +29,7 @@
     "@ngx-prism/core": "^2.0.1",
     "@ngx-prism/rxjs": "^0.1.5",
     "@nicky-lenaers/ngx-scroll-to": "^3.0.1",
-    "@types/prismjs": "^1.16.5",
+    "@types/prismjs": "^1.16.6",
     "babel-polyfill": "^6.26.0",
     "bootstrap": "^4.6.0",
     "core-js": "^3.14.0",
